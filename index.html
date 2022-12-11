@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>EXPOSED - BBZW</title>
+    <link href="lib/bs5/bs.min.css" rel="stylesheet">
+    <link href="lib/fa/css/all.min.css" rel="stylesheet">
+    <link href="lib/img/favicon.png" rel="icon">
+  </head>
+  <body>
+    <div class="text-center container user-select-none pt-5" style="cursor: progress;">
+      <h1 class="fw-semibold">Berufsbildungzentrum Wirtschaft Informatik & Technik</h1>
+      <h2 id="count" class="fw-bold btn btn-lg btn-danger" style="cursor: none;">0</h2>
+      <h3 class="pb-3">Eyes opened.</h3>
+      <button class="btn btn-lg btn-dark" type="button" style="cursor: progress;"><a href="https://bbzw.lu.ch/" style="color:white; cursor: progress;"class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i> Weiter zu bbzw.lu.ch</a></button>
+    </div>
+    <div class="container user-select-none pt-2 text-center" style="cursor: wait">
+      <img src="lib/img/exposed.png" draggable="false">
+    </div>
+    <div class="fixed-bottom d-flex flex-row-reverse" style="cursor:crosshair;">
+      <p><a href="http://www.hochbuerder.org/erdstrahlen/" target="_blank" style="cursor:crosshair;">
+        <img alt="Erdstrahlen Freie Webseite!" cleaner="ER-SUP-2582954" height="42" src="http://www.hochbuerder.org/erdstrahlen-zertifikat.gif" width="193" style="cursor:crosshair;"></a></p>
+    </div>
+    <script type="text/javascript">
+      const countEl = document.getElementById('count');
+
+      updateVisitCount();
+
+      function updateVisitCount(){
+        fetch('https://api.countapi.xyz/update/bbzw.exposed/count/?amount=1')
+        .then(res => res.json())
+        .then(res => {
+          countEl.innerHTML = res.value;
+        })
+      }
+    </script>
+  </body>
+</html>
